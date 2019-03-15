@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "src/hibernate-mapping-3.0.dtd">
+ 
+          <hibernate-mapping>
+         <class name="com.pack.Employee" table="Employee600">
+         <id name="id">
+         <generator class="increment"></generator>
+         </id>
+         <property name="name" type="java.lang.String" column="emp_name" not-null="true" length="25"></property>
+        <one-to-one name="address" class="com.pack.Address" property-ref="empid" cascade="all"/> <!-- any change in parent reflects in child table too so use cascade -->
+         </class>
+         <class name="com.pack.Address" table="Address600">
+         <id name="id">
+         <generator class="native"></generator>
+         </id>
+         <property name="address"></property>
+         <property name="country"></property>
+         <property name="empid"></property>
+         </class>
+        
+          </hibernate-mapping>

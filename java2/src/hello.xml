@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<beans 
+
+    xmlns="http://www.springframework.org/schema/beans" 
+
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+
+    xmlns:p="http://www.springframework.org/schema/p" 
+
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+
+  
+
+<bean id="collection" class="com.pack.javaCollection"> 
+
+<property name="addresslist">
+<list>
+<value>India</value>
+<value>USA</value>
+<value>Japan</value>
+<value>Korea</value>
+</list>
+</property>
+<property name="addressset">
+<set>
+<value>Kolkata</value>
+<value>Delhi</value>
+<value>Chennai</value>
+<value>Bangalore</value>
+</set>
+</property>
+<property name="addressmap">
+<map>
+<entry key="1" value="red"></entry>
+<entry key="2" value="mauve"></entry>
+<entry key="3" value="green"></entry>
+<entry key="4" value="blue"></entry>
+</map>
+</property>
+<property name="addressprop">
+<props>
+<prop key="one">hi</prop>
+<prop key="two">he</prop>
+<prop key="three">ha</prop>
+<prop key="four">ho</prop>
+</props>
+</property>
+</bean> 
+
+  
+
+</beans> 
